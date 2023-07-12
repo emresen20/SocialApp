@@ -6,6 +6,7 @@ import { HomeScreen } from "../HomeScreen";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { AppColors } from "../../values/Colors";
 import Icon from 'react-native-vector-icons/FontAwesome5';
+import denemeScreen from "../denemeScreen";
 
 export const Router = ( ) => {
 
@@ -88,10 +89,11 @@ export const Router = ( ) => {
                 screenOptions={{
                     headerShown: false
                 }}>
-
+                <Stack.Screen name="denemeScreen" component={denemeScreen} />
+                <Stack.Screen name={"Login"} component={LoginScreen}/>
                 <Stack.Screen name={"HomeTabs"} component={HomeTabs}/>
 
-                <Stack.Screen name={"Login"} component={LoginScreen}/>
+                
                 <Stack.Screen name={"SignUp"} component={SignUpScreen}/>
 
             </Stack.Navigator>
